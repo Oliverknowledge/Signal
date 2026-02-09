@@ -4,7 +4,7 @@ Signal is an AI learning agent that helps people retraining for new careers turn
 
 It analyzes saved content, decides whether learning is worth interrupting your day, generates active recall questions, and continuously evaluates decision quality using Opik.
 
-Demo video: [https://www.youtube.com/watch?v=bh-UjhOsnSw](https://www.youtube.com/watch?v=bh-UjhOsnSw)
+Demo video: [https://youtu.be/H9j7-wSRR-I](https://youtu.be/H9j7-wSRR-I)
 
 ## Problem
 
