@@ -6,20 +6,84 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2AC5B3DC2F211DFF0022ED28 /* SignalShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2AC5B3D22F211DFF0022ED28 /* SignalShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AC5B3DA2F211DFF0022ED28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AC5B3922F20CF550022ED28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AC5B3D12F211DFF0022ED28;
+			remoteInfo = SignalShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2AC5B3E12F211DFF0022ED28 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2AC5B3DC2F211DFF0022ED28 /* SignalShare.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2AC5B39A2F20CF550022ED28 /* Signal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AC5B3D22F211DFF0022ED28 /* SignalShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SignalShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2AC5B3A92F20DB1A0022ED28 /* Exceptions for "Signal" folder in "Signal" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2AC5B3992F20CF550022ED28 /* Signal */;
+		};
+		2AC5B3E02F211DFF0022ED28 /* Exceptions for "SignalShare" folder in "SignalShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2AC5B3D12F211DFF0022ED28 /* SignalShare */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2AC5B39C2F20CF550022ED28 /* Signal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2AC5B3A92F20DB1A0022ED28 /* Exceptions for "Signal" folder in "Signal" target */,
+			);
 			path = Signal;
+			sourceTree = "<group>";
+		};
+		2AC5B3D32F211DFF0022ED28 /* SignalShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2AC5B3E02F211DFF0022ED28 /* Exceptions for "SignalShare" folder in "SignalShare" target */,
+			);
+			path = SignalShare;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2AC5B3972F20CF550022ED28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC5B3CF2F211DFF0022ED28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				2AC5B39C2F20CF550022ED28 /* Signal */,
+				2AC5B3D32F211DFF0022ED28 /* SignalShare */,
 				2AC5B39B2F20CF550022ED28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2AC5B39A2F20CF550022ED28 /* Signal.app */,
+				2AC5B3D22F211DFF0022ED28 /* SignalShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +121,12 @@
 				2AC5B3962F20CF550022ED28 /* Sources */,
 				2AC5B3972F20CF550022ED28 /* Frameworks */,
 				2AC5B3982F20CF550022ED28 /* Resources */,
+				2AC5B3E12F211DFF0022ED28 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2AC5B3DB2F211DFF0022ED28 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				2AC5B39C2F20CF550022ED28 /* Signal */,
@@ -69,6 +137,28 @@
 			productName = Signal;
 			productReference = 2AC5B39A2F20CF550022ED28 /* Signal.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2AC5B3D12F211DFF0022ED28 /* SignalShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AC5B3DD2F211DFF0022ED28 /* Build configuration list for PBXNativeTarget "SignalShare" */;
+			buildPhases = (
+				2AC5B3CE2F211DFF0022ED28 /* Sources */,
+				2AC5B3CF2F211DFF0022ED28 /* Frameworks */,
+				2AC5B3D02F211DFF0022ED28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2AC5B3D32F211DFF0022ED28 /* SignalShare */,
+			);
+			name = SignalShare;
+			packageProductDependencies = (
+			);
+			productName = SignalShare;
+			productReference = 2AC5B3D22F211DFF0022ED28 /* SignalShare.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +171,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					2AC5B3992F20CF550022ED28 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					2AC5B3D12F211DFF0022ED28 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +193,20 @@
 			projectRoot = "";
 			targets = (
 				2AC5B3992F20CF550022ED28 /* Signal */,
+				2AC5B3D12F211DFF0022ED28 /* SignalShare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2AC5B3982F20CF550022ED28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC5B3D02F211DFF0022ED28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +223,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AC5B3CE2F211DFF0022ED28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AC5B3DB2F211DFF0022ED28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AC5B3D12F211DFF0022ED28 /* SignalShare */;
+			targetProxy = 2AC5B3DA2F211DFF0022ED28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2AC5B3A32F20CF560022ED28 /* Debug */ = {
@@ -249,13 +365,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Signal/Signal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z4QZF7362F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Signal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -280,13 +401,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Signal/Signal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z4QZF7362F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Signal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,6 +425,64 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2AC5B3DE2F211DFF0022ED28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SignalShare/SignalShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z4QZF7362F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SignalShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SignalShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OliverStevenson.Signal.SignalShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AC5B3DF2F211DFF0022ED28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SignalShare/SignalShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z4QZF7362F;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SignalShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SignalShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OliverStevenson.Signal.SignalShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,6 +507,15 @@
 			buildConfigurations = (
 				2AC5B3A62F20CF560022ED28 /* Debug */,
 				2AC5B3A72F20CF560022ED28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AC5B3DD2F211DFF0022ED28 /* Build configuration list for PBXNativeTarget "SignalShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AC5B3DE2F211DFF0022ED28 /* Debug */,
+				2AC5B3DF2F211DFF0022ED28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

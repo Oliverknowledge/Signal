@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Signal</string>
+	<key>CFBundleDisplayName</key>
+	<string>Signal</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Signal adds your prep events (interviews, assessments, deadlines) to your calendar.</string>
+	<key>CFBundleIdentifier</key>
+	<string>OliverStevenson.Signal</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>OliverStevenson.Signal.refresh</string>
+		<string>OliverStevenson.Signal.processing</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+	</array>
+	<key>SIGNAL_RELAY_TOKEN</key>
+	<string></string>
+	<key>UILaunchScreen</key>
+	<dict/>
+</dict>
+</plist>
