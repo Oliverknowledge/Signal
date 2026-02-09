@@ -1,179 +1,179 @@
-# Signal - Policy-Aware Learning Agent for Career Switchers
+# Policy Aware Learning Agent For Career Retraining And New Year Skill Goals
 
-Signal is an AI learning agent that helps people retraining for new careers turn everyday content into consistent, measurable learning progress.
+Signal is an autonomous learning agent that decides when learning should happen and when it should not, turning everyday content into measurable progress.
 
-It analyzes saved content, decides whether learning is worth interrupting your day, generates active recall questions, and continuously evaluates decision quality using Opik.
+## Demo Video
 
-Demo video: [https://youtu.be/H9j7-wSRR-I](https://youtu.be/H9j7-wSRR-I)
+https://youtu.be/H9j7-wSRR-I
+
+---
+
+## What This Is
+
+Signal is a production mobile agent that:
+
+- Analyzes real world content using LLMs
+- Decides whether to trigger learning or protect user focus
+- Generates active recall when learning value is high
+- Continuously evaluates its own decisions using Opik
+
+---
 
 ## Problem
 
-Most learning apps assume more content equals more progress.
+Most learning products optimize for content consumption.
 
-In reality, New Year learning goals and career transition plans often fail because:
+Real users fail learning goals because:
 
-- Progress feels invisible
+- Progress is invisible
 - Learning is inconsistent
-- Users are overwhelmed by content
-- There is no system deciding when learning should actually happen
+- Content volume overwhelms attention
+- No system decides when learning is worth interruption
 
-Signal focuses on attention and consistency, not content volume.
+Signal optimizes for attention, consistency, and measurable progress.
 
-## What Signal Does
+---
 
-### Content Capture
+## Why This Project Is Strong For This Track
 
-Users can:
+- Real functionality running on a physical iPhone
+- Real world relevance for career switchers and New Year skill goals
+- Real agent decision making, not just generation
+- Real evaluation and observability using Opik
+- Human in the loop correction built in
 
-- Share URLs or text from any app (Share Extension)
-- Add content manually inside Signal
+---
 
-Content is queued and analyzed in the main app.
+## Core Agent Behavior
 
-### Agent Decision - Trigger or Ignore
+For every saved item the agent chooses exactly one action:
 
-The backend extracts:
+- Trigger active recall
+- Ignore while still saving content silently
 
-- Key concepts
+Ignored content is preserved. The system chooses not to interrupt, not to discard.
+
+---
+
+## LLM And Agent Usage
+
+LLMs are used where they create real value:
+
+- Content understanding and concept extraction
+- Learning value and relevance evaluation
+- Recall question generation
+- Open ended recall grading
+- LLM as judge evaluation in production
+
+Agent capabilities include retrieval from prior captured learning, policy based decision making, and tool driven evaluation pipelines.
+
+---
+
+## Evaluation And Observability
+
+Every decision is fully traceable.
+
+Each trace records:
+
+- Intervention policy
+- System decision
 - Relevance score
 - Learning value score
-- Recall questions (if triggered)
+- Concept density
+- Retrieval usage
+- Agent step sequence
 
-The agent chooses:
+No raw user content or personal data is logged.
 
-Triggered:
+---
 
-- Generates recall prompts
-- Can schedule prep-ready nudges (if event exists)
+## Opik Integration
 
-Ignored:
+Offline experiments compare policies and prompt strategies across datasets.
 
-- Saved quietly
-- No interruption
-- Still accessible later
+Online evaluation continuously scores live production decisions using a deterministic policy aware LLM judge.
 
-Signal chooses not to interrupt, not to discard.
+This enables measurable agent quality, regression detection, and real world decision monitoring.
 
-### Active Recall Sessions
+---
 
-- Multiple choice -> graded locally
-- Open-ended -> graded via backend LLM
-- Only aggregate recall metrics are submitted (correct / total)
+## Human In The Loop
 
-This makes learning progress measurable without storing raw answers.
+If the agent incorrectly ignores useful content, the user can submit feedback and immediately unlock recall questions for that item.
 
-### Events and Goal-Driven Learning
+This creates a direct correction path between user signal and agent behavior.
 
-Users can add upcoming events (interviews, exams, certifications).
+---
 
-Signal:
+## Real World Example
 
-- Prioritizes prep content for nearest event
-- Sends event reminders (7 / 3 / 1 days)
-- Optionally sends prep-ready nudges when high-value learning is detected
+User preparing for a systems engineering interview shares two videos.
 
-### Feedback Loop (False Negative Recovery)
+C++ memory management video triggers recall and preparation nudges.
 
-If Signal ignores useful content, users can:
+General programming video is saved silently with no interruption.
 
-- Submit feedback
-- Instantly unlock recall questions for that item
+The agent protects focus without losing data.
 
-This creates a real human-in-the-loop correction path.
+---
 
-## Opik Integration (Core Differentiator)
+## Privacy And Safety
 
-### Trace-Level Observability
+- No raw article text or transcripts stored in observability logs
+- No personally identifiable data logged
+- Recall submissions use aggregate metrics only
+- Open ended answers are only sent for grading when user requests
 
-Each decision logs:
-
-- `intervention_policy` (`focused` / `aggressive`)
-- `system_decision` (`triggered` / `ignored`)
-- `relevance_score`
-- `learning_value_score`
-- `concept_count`
-- `retrieval_used` and `agent_steps`
-- Anonymized reason codes (no raw content)
-
-### Experiments (Offline Evaluation)
-
-We run Opik experiments to compare:
-
-- Intervention policies
-- Model or prompt variants
-- Decision quality across datasets
-
-### Online Evaluation (Production Monitoring)
-
-Opik continuously evaluates live decisions using a policy-aware judge.
-
-This means:
-
-- Regressions are detectable quickly
-- Decision quality is measurable in production
-- Agent behavior can improve using real usage data
-
-## Privacy
-
-- No PII in observability logs
-- No raw article text or transcripts logged
-- Recall submission uses aggregate metrics only
-- Open-ended answers only sent when grading is requested
+---
 
 ## Technical Overview
 
-### iOS
+### iOS Application
 
-Targets:
-
-- `Signal/`
-- `SignalShare/`
-
-Share queue uses App Group:
-
-`group.OliverStevenson.Signal`
-
-### Backend Endpoints
-
-```
-POST /api/analyze
-POST /api/grade-recall
-POST /api/recall
-POST /api/feedback
-POST /api/opik-log
-```
-
-Authentication:
-
-`X-Signal-Relay-Token`
-
-## Running the Project
-
-### iOS
-
-1. Open project in Xcode
-2. Ensure App Group entitlements are enabled
-3. Run the `Signal` target
+- Swift based app with Share Extension capture
+- Background processing using App Groups
+- Runs fully on device with remote inference backend
 
 ### Backend
 
-1. `cd signal-backend`
-2. Configure environment variables
-3. Run locally (`npm install && npm run start`) or deploy
-4. Ensure the iOS API base URL matches the backend URL
+- Content analysis
+- Recall generation
+- Recall grading
+- Feedback processing
+- Opik trace logging
+
+---
+
+## Why iPhone Matters
+
+Signal runs where decisions matter most.
+
+Learning happens during real daily behavior, not inside a desktop dashboard.
+
+This proves production viability, not prototype viability.
+
+---
 
 ## Demo Flow
 
-1. Add an upcoming event
-2. Share two YouTube links
-   - One aligned -> triggers recall
-   - One misaligned -> ignored quietly
-3. Complete a recall session
-4. Submit feedback on a false negative
-5. Show Opik experiments and online evaluation
+1. Create learning goal and upcoming event
+2. Share two YouTube videos from the iOS share sheet
+3. Observe triggered versus ignored decisions
+4. Complete recall session
+5. Submit feedback on a missed learning opportunity
+6. View Opik traces and online evaluation results
 
-## Design Philosophy
+---
 
-- Explainability over black-box autonomy
-- Measurable progress over content volume
-- Real-world usefulness over novelty
+## Design Principles
+
+- Explainability over opaque autonomy
+- Measured progress over content volume
+- Consistency over intensity
+- Real world usefulness over novelty
+
+---
+
+## One Line Summary
+
+Signal is an agent that decides when learning is worth your attention and proves those decisions are correct using real evaluation.
