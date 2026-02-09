@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Xcode local/user state
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# SwiftPM build artifacts
+.build/
+
+# Backend local artifacts (vendored under signal-backend/)
+signal-backend/node_modules/
+signal-backend/.vercel/
+signal-backend/dist/
+signal-backend/.env
+signal-backend/.env.local
+signal-backend/.env.*.local
+
+# Logs
+*.log
+npm-debug.log*

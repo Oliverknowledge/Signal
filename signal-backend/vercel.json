@@ -1,0 +1,25 @@
+{
+  "functions": {
+    "api/opik-log.ts": {
+      "maxDuration": 10
+    },
+    "api/feedback.ts": {
+      "maxDuration": 10
+    },
+    "api/recall.ts": {
+      "maxDuration": 10
+    },
+    "api/grade-recall.ts": {
+      "maxDuration": 30
+    },
+    "api/analyze.ts": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
+}
